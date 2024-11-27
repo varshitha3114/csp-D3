@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WageConnect Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: silver;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .form-side {
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #f9f9f9;
+            border-radius: 15px;
+        }
+
+        .form-side:nth-child(2) {
+            background: #e6f2ff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+            font-size: 1.8em;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input, select {
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #6a11cb;
+            outline: none;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #4CAF50;
+            background-color: #dff0d8;
+            color: #3c763d;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .form-container {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .form-side {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5em;
+            }
+
+            input, select, button {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <!-- Client Signup Form -->
+        <div class="form-side">
+            <i><h2>Client Signup</h2></i>
+            <form id="client-form">
+                <label for="client-name">Name</label>
+                <input type="text" id="client-name" name="client-name" placeholder="Enter your Full Name" required>
+
+                <label for="client-email">Email</label>
+                <input type="email" id="client-email" name="client-email" placeholder="Enter your Email" required>
+
+                <label for="client-password">Password</label>
+                <input type="password" id="client-password" name="client-password" placeholder="Enter the  Password" required>
+
+                <label for="client-contact">Contact Info</label>
+                <input type="text" id="client-contact" name="client-contact" placeholder="Your Contact Number" required>
+
+                <button type="submit">Sign Up</button>
+                <div id="client-success" class="success-message">You have successfully signed up!</div>
+            </form>
+        </div>
+
+        <!-- Wage Earner Registration Form -->
+        <div class="form-side">
+            <i><h2>Wage Earner Registration</h2></i>
+            <form id="earner-form">
+                <label for="earner-name">Name</label>
+                <input type="text" id="earner-name" name="earner-name" placeholder="Enter your Full Name" required>
+
+                <label for="earner-aadhaar">Aadhaar Number</label>
+                <input type="text" id="earner-aadhaar" name="earner-aadhaar" placeholder="Enter your Aadhaar Number" required>
+
+                <label for="earner-dob">Date of Birth</label>
+                <input type="date" id="earner-dob" name="earner-dob" required>
+
+                <label for="earner-city">City/Village</label>
+                <input type="text" id="earner-city" name="earner-city" placeholder="Your City or Village" required>
+
+                <label for="earner-state">State</label>
+                <input type="text" id="earner-state" name="earner-state" placeholder="Your State" required>
+
+                <label for="earner-contact">Contact Info</label>
+                <input type="text" id="earner-contact" name="earner-contact" placeholder="Your Contact Number" required>
+
+                <label for="earner-skills">Skills</label>
+                <input type="text" id="earner-skills" name="earner-skills" placeholder="Specify Your Skills" required>
+<label for="earner-experience">Skills</label>
+                <input type="text" id="earner-experience" name="earner-experience" placeholder="Specify Your work experience" required>
+
+
+                <label for="earner-qualifications">Qualifications</label>
+                <input type="text" id="earner-qualifications" name="earner-qualifications" placeholder="Enter Your Qualifications" required>
+
+                <label for="profile-image">Upload Profile Image:</label>
+                <input type="file" id="profile-image" name="profile-image"  accept="image/*" required>
+            
+
+                <button type="submit">Register</button>
+                <div id="earner-success" class="success-message">You have successfully registered!</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('client-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('client-success').style.display = 'block';
+    });
+
+    document.getElementById('earner-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        document.getElementById('earner-success').style.display = 'block';
+    });
+</script>
+
+</body>
+</html>

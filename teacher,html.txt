@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worker Profiles</title>
+    <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'calligraphy', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    font-family: calligraphy;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Worker Container */
+.worker-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Worker Profile */
+.worker-profile {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 0.8rem;
+    text-align: center;
+}
+
+.worker-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.worker-profile h2 {
+    margin: 0.8rem 0 0.4rem;
+    font-size: 1.5rem;
+}
+
+.worker-profile p {
+    margin: 0;
+    color: #777;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.contact-button {
+    margin-top: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .worker-container {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Worker Profiles</h1>
+    </header>
+    <section class="worker-container">
+        <div class="worker-profile">
+            <img src="t1.JPG" alt="Worker 1">
+            <h2>VALLA LAKSHMI SREE</h2>
+            <p>
+                <b>Profession:</b> Teacher<br>
+                <b>Experience:</b> 5 years<br>
+                <b>Specialization:</b> tutoring,speak in 4 different languages<br><br>
+                <b>Contact Info:</b> 97536 19384<br>
+                <b>City:</b> vijayawada<br>
+                <b>State:</b> Andhra Pradesh<br>
+                <b>Country:</b> India<br>
+            </p>
+            <a href="tel:9753619384" class="contact-button">Contact Us</a>
+        </div>
+    </section>
+</body>
+</html>

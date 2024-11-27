@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wage Connect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('main.jpg'); /* Add your image URL here */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-bar {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .categories-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 0 20px;
+        }
+
+        .categories-section h2 {
+            margin-bottom: 20px;
+            color: #444;
+            font-size: 2rem;
+        }
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .category {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 15px;
+            text-align: center;
+            backdrop-filter: blur(8px); /* Adds a blur effect to the background */
+        }
+
+        .category h3 {
+            margin: 0 0 10px;
+            color: purple;
+        }
+
+        .category ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .category ul li {
+            margin: 5px 0;
+            font-family: Walbaum Display;
+        }
+
+        .category ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .category ul li a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: silver;
+            color: black;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .contact-section {
+            margin: 20px 0;
+        }
+
+        .contact-section ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .contact-section ul li a {
+            text-decoration: none;
+            color: white;
+            background-color: grey; /* Facebook blue */
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .contact-section ul li a:hover {
+            opacity: 0.8;
+        }
+
+        .ratings-section {
+            margin: 20px 0;
+        }
+
+        .ratings-section input[type="radio"] {
+            display: none;
+        }
+
+        .ratings-section label {
+            font-size: 25px;
+            color: grey;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .ratings-section input[type="radio"]:checked ~ label {
+            color: gold;
+        }
+
+        .ratings-section label:hover, .ratings-section label:hover ~ label {
+            color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <b><h1>WageConnect</h1></b>
+        <h3>"Select a Category to Explore Workers"</h3>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search profiles..." onkeyup="filterProfiles()">
+    </div>
+
+    <div class="categories-section">
+        <div class="categories">
+            <!-- Categories here -->
+            <!-- Sample category for reference -->
+            <div class="category">
+                <h3>Construction Workers</h3>
+                <ul id="constuction">
+                    <li><a href="carpenter.html">Carpenters</a></li>
+                    <li><a href="electrican.html">Electricians</a></li>
+                    <li><a href="#">Plumbers</a></li>
+                </ul>
+            </div>
+  <!-- Example Category 2 -->
+            <div class="category">
+                <h3>Manufacturing Workers</h3>
+                <ul id="Manufacture">
+                    <li><a href="#">Assembly Line Workers</a></li>
+                    <li><a href="#">Machine Operators</a></li>
+                    <li><a href="#">Welders</a></li>
+                    <li><a href="#">Factory Workers </a></li>
+
+                </ul>
+            </div>
+
+            <!-- Example Category 3 -->
+            <div class="category">
+                <h3>Education</h3>
+                <ul id="eduProfiles">
+                    <li><a href="#">Teaching Assistants</a></li>
+                    <li><a href="teacher.html">Tutor</a></li>
+                    <li><a href="#">Education Administrator</a></li>
+
+                </ul>
+            </div>
+           <!-- Example Category 4 -->
+            <div class="category">
+                <h3>Technology and IT</h3>
+                <ul id="techProfiles">
+                    <li><a href="#">IT Support Specialists</a></li>
+                    <li><a href="computer.html">Computer Technicians</a></li>
+                    <li><a href="#">Network Administrators</a></li>
+
+                </ul>
+            </div>
+
+          <!-- Example Category 4 -->
+            <div class="category">
+                <h3>Food Services </h3>
+                <ul id="foodProfiles">
+                    <li><a href="#">Chefs and Cooks</a></li>
+                    <li><a href="#">Waitstaff</a></li>
+                    <li><a href="#">Housekeeping Staff</a></li>
+
+                </ul>
+            </div>
+           <!-- Example Category 5 -->
+            <div class="category">
+                <h3>Media and Entertainment </h3>
+                <ul id="foodProfiles">
+                    <li><a href="#">Graphic Designers</a></li>
+                    <li><a href="#">Photographers</a></li>
+                   <li><a href="#">Videographers</a></li>
+                  <li><a href="#">Editors</a></li>
+
+                </ul>
+            </div>
+            <!-- Example Category 6 -->
+            <div class="category">
+                <h3>Arts and Crafts </h3>
+                <ul id="artProfiles">
+                    <li><a href="#">Artisans</a></li>
+                    <li><a href="painter.html">Painters</a></li>
+                       <li><a href="#">tailores</a></li>
+                   <li><a href="#">Sculptors</a></li>
+                 
+
+                </ul>
+            </div>
+<!-- Example Category 7 -->
+            <div class="category">
+                <h3>Drivers and Transport </h3>
+                <ul id="driveProfiles">
+                    <li><a href="driver.html">Truck Drivers</a></li>
+                    <li><a href="#">Delivery Drivers</a></li>
+                   <li><a href="#">Taxi and Rideshare Drivers</a></li>
+                 
+
+                </ul>
+            </div>
+
+<!-- Example Category 8-->
+            <div class="category">
+                <h3>Farm Workers </h3>
+                <ul id="driveProfiles">
+                    <li><a href="farmer.html">Crop Farmers</a></li>
+                    <li><a href="#">Dairy Workers</a></li>
+                    </ul>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="contact-section">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">WhatsApp</a></li>
+                <li><a href="#">GitHub</a></li>
+            </ul>
+        </div>
+
+        <div class="ratings-section">
+            <h4>Reviews and Ratings</h4>
+            <div>
+                <input type="radio" id="star5" name="rating" value="5">
+                <label for="star5">&#9733;</label>
+
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4">&#9733;</label>
+
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3">&#9733;</label>
+
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2">&#9733;</label>
+
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1">&#9733;</label>
+            </div>
+        </div>
+
+            </footer>
+<footer>
+        <div class="container">
+            <p>&copy; 2024 WageConnect. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function filterProfiles() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const categories = document.querySelectorAll('.category ul');
+
+            categories.forEach(category => {
+                const profiles = category.querySelectorAll('li');
+                profiles.forEach(profile => {
+                    const text = profile.textContent || profile.innerText;
+                    profile.style.display = text.toLowerCase().indexOf(filter) > -1 ? '' : 'none';
+                });
+            });
+        }
+    </script>
+</body>
+</html>

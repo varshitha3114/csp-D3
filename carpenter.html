@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carpenter Profiles</title>
+    <style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'calligraphy', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    font-family: calligraphy;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Worker Container */
+.worker-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Worker Profile */
+.worker-profile {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
+}
+
+.worker-profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.worker-profile h2 {
+    margin: 1rem 0 0.5rem;
+    font-size: 2rem;
+}
+
+.worker-profile p {
+    margin: 0;
+    color: #777;
+    font-size: 1.2rem;
+}
+
+.contact-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .worker-container {
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Worker Profiles</h1>
+    </header>
+    <section class="worker-container">
+        <div class="worker-profile">
+            <img src="c1.JPG" alt="Worker 1">
+            <h2>MATTA RAJA SRINIVAS</h2>
+            <p><b>Profession:</b> Carpenter<br>
+            <b>Experience:</b> 10 years<br>
+            <b>Specialisation:</b> Rough, Finish, Cabinet Making Carpentry<br>
+            <b>Contact Info:</b> 95489 87349<br>
+            <b>City:</b> Machilipatnam<br>
+            <b>State:</b> Andhra Pradesh<br>
+            <b>Country:</b> India</p><br/>
+            <a href="tel:9548987349" class="contact-button">Contact Us</a>
+        </div>
+
+        <div class="worker-profile">
+            <img src="c2.JPG" alt="Worker 2">
+            <h2>MANDAPATI SURENDRA</h2>
+            <p><b>Profession:</b> Carpenter<br>
+            <b>Experience:</b> 15 years<br>
+            <b>Specialisation:</b> Trim Carpentry<br>
+            <b>Contact Info:</b> 97237 25713<br>
+            <b>City:</b> Chinnapuram<br>
+            <b>State:</b> Andhra Pradesh<br>
+            <b>Country:</b> India</p><br/>
+            <a href="tel:9723725713" class="contact-button">Contact Us</a>
+        </div>
+    </section>
+</body>
+</html>

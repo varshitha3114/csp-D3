@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profession Categories</title>
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.description {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.profession-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.category {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+}
+
+.category a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.category h2 {
+    margin: 0 0 0.5rem;
+    color: #333;
+}
+
+.category p {
+    margin: 0;
+    color: #666;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+</style></head>
+<body>
+    <header>
+        <h1>Profession Categories</h1>
+    </header>
+    <main>
+        <section class="description">
+            <p>Welcome to our profession guide! Explore various fields of work and discover the perfect career path for you. Click on any profession category to learn more about the opportunities, skills, and roles involved in each area.</p>
+        </section>
+        <section class="profession-categories">
+            <div class="category">
+                <a href="details.html?category=technology">
+                    <h2>Technology</h2>
+                    <p>Software Engineer, Data Scientist, Web Developer</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="details.html?category=healthcare">
+                    <h2>Healthcare</h2>
+                    <p>Doctor, Nurse, Pharmacist</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="details.html?category=education">
+                    <h2>Education</h2>
+                    <p>Teacher, Professor, Tutor</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="details.html?category=creative-arts">
+                    <h2>Creative Arts</h2>
+                    <p>Artist, Musician, Writer</p>
+                </a>
+            </div>
+            <div class="category">
+                <a href="details.html?category=business">
+                    <h2>Business</h2>
+                    <p>Entrepreneur, Manager, Consultant</p>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Profession Categories</p>
+    </footer>
+</body>
+</html>
